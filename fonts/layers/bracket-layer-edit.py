@@ -32,6 +32,6 @@ try:
                     )
                 )
 except TypeError as e:
-    print("ERROR: {}".format(e))
+    print("ERROR: {}. {}".format(e, thisGlyph.name))
 
 font.save()
