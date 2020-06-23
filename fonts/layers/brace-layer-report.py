@@ -16,11 +16,11 @@ import GlyphsApp  # noqa: F401
 
 font = Glyphs.font  # noqa: F821
 try:
-    for thisGlyph in font.glyphs:
-        for layer in thisGlyph.layers:
+    for this_glyph in font.glyphs:
+        for layer in this_glyph.layers:
             if "{" in layer.name:
-                print("{} {}".format(thisGlyph.name, layer.name))
+                print("{} {}".format(this_glyph.name, layer.name))
 except TypeError as e:
-    print("ERROR: {}. {}".format(e, thisGlyph.name))
+    print("ERROR: {}. {}".format(e, this_glyph.name))
 
 font.save()

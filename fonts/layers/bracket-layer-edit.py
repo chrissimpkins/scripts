@@ -19,8 +19,8 @@ POST_BRACKET_SIZE = "18"
 
 font = Glyphs.font  # noqa: F821
 try:
-    for thisGlyph in font.glyphs:
-        for layer in thisGlyph.layers:
+    for this_glyph in font.glyphs:
+        for layer in this_glyph.layers:
             # test for bracket layer opening delimiter
             # identifier and the expected pre value
             if "[" in layer.name and PRE_BRACKET_SIZE in layer.name:
@@ -28,10 +28,10 @@ try:
                 layer.name = layer.name.replace(PRE_BRACKET_SIZE, POST_BRACKET_SIZE)
                 print(
                     "{} in {} updated to {}".format(
-                        thisGlyph.name, layer.master, POST_BRACKET_SIZE
+                        this_glyph.name, layer.master, POST_BRACKET_SIZE
                     )
                 )
 except TypeError as e:
-    print("ERROR: {}. {}".format(e, thisGlyph.name))
+    print("ERROR: {}. {}".format(e, this_glyph.name))
 
 font.save()
