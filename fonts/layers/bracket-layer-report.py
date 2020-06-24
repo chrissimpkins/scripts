@@ -22,5 +22,3 @@ try:
                 print("{} {}".format(this_glyph.name, layer.name))
 except TypeError as e:
     print("ERROR: {}. {}".format(e, this_glyph.name))
-
-font.save()
