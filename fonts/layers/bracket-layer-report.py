@@ -19,6 +19,6 @@ try:
     for this_glyph in font.glyphs:
         for layer in this_glyph.layers:
             if "[" in layer.name:
-                print("{} {}".format(this_glyph.name, layer.name))
+                print("{} {} {}".format(this_glyph.name, layer.master, layer.name))
 except TypeError as e:
     print("ERROR: {}. {}".format(e, this_glyph.name))
